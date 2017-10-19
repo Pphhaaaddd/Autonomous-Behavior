@@ -27,8 +27,8 @@ class Vehicle {
     PVector desired = PVector.sub(target, loc);
     float d=desired.mag();
 
-    if (d<50) {
-      float m= map(d, 0, 50, 0, maxSpeed);
+    if (d<100) {
+      float m= map(d, 0, 50, 0, maxSpeed/2);
       desired.setMag(m);
     } else
       desired.setMag(maxSpeed);
@@ -48,8 +48,11 @@ class Vehicle {
     pushMatrix();
     translate(loc.x, loc.y);
     rotate(dir);
-    rectMode(CENTER);
-    rect(0, 0, 8, 20);
+    beginShape();
+    vertex(0,-2*r);
+    vertex(-r,2*r);
+    vertex(r,2*r);
+    endShape();
     popMatrix();
   }
 }
