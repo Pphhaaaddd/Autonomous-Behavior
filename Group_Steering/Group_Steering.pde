@@ -22,6 +22,7 @@ void draw() {
   text("Separation multiplier : " + s,10,height-30);
   text("Aligning multiplier : " + a,10,height-20);
   text("Cohesion multiplier : " + c,10,height-10);
+  text("No. of Particles : " + v.size(),width-120,height-10);
 }
 void keyPressed() {
   if (key =='a') {
