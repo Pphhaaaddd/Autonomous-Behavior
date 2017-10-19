@@ -1,3 +1,11 @@
+// The Nature of Code
+// Daniel Shiffman
+// http://natureofcode.com
+
+// Path Following
+// Via Reynolds: // http://www.red3d.com/cwr/steer/PathFollow.html
+
+// Using this variable to decide whether to draw all the stuff
 boolean debug = true;
 
 // A path object (series of connected points)
@@ -6,9 +14,10 @@ Path path;
 ArrayList<Vehicle> car;
 
 void setup() {
-  size(1280, 720);
+  size(640, 360);
   path = new Path();
 
+  // Each vehicle has different maxspeed and maxforce for demo purposes
   car = new ArrayList<Vehicle>();
 }
 
@@ -16,6 +25,7 @@ void draw() {
   background(255);
   // Display the path
   path.display();
+  // The boids follow the path
   for (Vehicle car : car) {
     // The boids follow the path
     car.follow(path);

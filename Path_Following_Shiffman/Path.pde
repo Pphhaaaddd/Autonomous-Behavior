@@ -15,7 +15,7 @@ class Path {
   float t=0;
   Path() {
     // Arbitrary radius of 20
-    radius = 10;
+    radius = 20;
     newPath();
   }
 
